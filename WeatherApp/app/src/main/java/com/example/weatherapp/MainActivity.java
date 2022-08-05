@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
                 wind.setText(response.body().getWind().getSpeed() + "");
 
                 String iconCode = response.body().getWeather().get(0).getIcon();
-                Picasso.get().load("https://openweathermap.org/img/wn/"+iconCode+"d@2x.png")
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(imageView);
+                Picasso.get().load("https://openweathermap.org/img/wn/"+iconCode+"@2x.png")
+                        .placeholder(R.drawable.ic_launcher_background)
+                        .into(imageView);
             }
 
             @Override
